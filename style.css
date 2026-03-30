@@ -1,4 +1,10 @@
 :root {
+
+    --text: #1f2937;
+    --panel-bg: #ffffff;
+    --shadow: 0 10px 28px rgba(0, 0, 0, .08);
+    --border-radius: 8px;
+
     /* Colors */
     --background-color: #e4e4e4;
     --angry-highlight: #ff0000;
@@ -7,62 +13,135 @@
     --sad-highlight: #5900ff;
 
     /* Elements */
-    --container-width: 50%; 
+    --container-width: 50%;
 }
 
-#audio-container {
-    height: fit-content;
-    width: 100%;
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: var(--background-color);
+    color: var(--text);
+    font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
-}
-
-#vtt-player {
-    width: var(--container-width);
-    margin-top: 4rem;
-    border-radius: 5px;
-    background-color: #f4f4f4;
-}
-
-#text-container{
-    width: var(--container-width);
-    text-align: center;
-    font-family: monospace;
-    font-weight: normal;
-    font-size: 0.9rem;
-    text-wrap: balance;
-    background-color: var(--background-color);
-    margin-top: 3rem;
-    border-radius: 5px;
-    height: 65vh;
+    align-items: center;
     padding: 1rem;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    transition: opacity 0.2s ease-in-out ;
-}
-
-#vtt-text,
-#prev-vtt-text,
-#next-vtt-text {
-    margin: 1rem;
-    display: block;
-}
-
-#prev-vtt-text,
-#next-vtt-text {
-    opacity: 0.5;
-    scale: 0.8;
 }
 
 u {
     color: var(--enthusiastic-highlight);
-    -webkit-text-stroke: 0.5px rgb(0, 0, 0);
+    -webkit-text-stroke: 0.5px #ff0000;
     font-weight: 900;
     font-size: 1.5rem;
     text-decoration: none;
+}
+
+#app {
+    width: min(60vw, 1000px);
+    display: grid;
+    grid-template-columns: 0.8fr 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+        "video-box transcript-box"
+        "audio-box transcript-box";
+    gap: 1rem;
+    min-height: 90vh;
+}
+
+.panel {
+    background: var(--panel-bg);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    padding: 1.5rem;
+}
+
+#video-box {
+    grid-area: video-box;
+    background: transparent;
+}
+
+#audio-box {
+    grid-area: audio-box;
+    background: transparent;
+}
+
+#transcript-box {
+    grid-area: transcript-box;
+    background: transparent;
+}
+
+panel h2,
+section h2 {
+    margin: 0 0 0.6rem;
+    font-size: 1rem;
+    color: #111827;
+}
+
+#video-box video,
+#audio-box audio {
+    width: 100%;
+    border-radius: 5px;
+}
+
+#transcript {
+    background: rgba(255, 255, 255, .9);
+    border-radius: 6px;
+    padding: 1rem;
+    min-height: 95%;
+    max-height: fit-content;
+    overflow-y: auto;
+}
+
+#transcript p {
+    margin: 1rem 0;
+    font-size: 0.9rem;
+}
+
+#vtt-text {
+    font-weight: 700;
+}
+
+#prev-vtt-text,
+#next-vtt-text {
+    opacity: 0.7;
+}
+
+.chapter-list {
+    list-style: none;
+    margin: 0.5rem 0 0;
+    padding: 0;
+    max-height: 22rem;
+    overflow-y: auto;
+}
+
+.chapter-list li {
+    margin: 0.2rem 0;
+    padding: 0.45rem 0.6rem;
+    border-radius: 6px;
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.04);
+    transition: background 0.2s ease;
+}
+
+.chapter-list li:hover {
+    background: rgba(0, 0, 0, 0.08);
+}
+
+.chapter-list li.active-chapter {
+    background: rgba(0, 0, 0, 0.16);
+    font-weight: 700;
+}
+
+@media (max-width: 820px) {
+    #app {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "video-box"
+            "transcript-box"
+            "audio-box";
+    }
 }

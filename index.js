@@ -1,58 +1,67 @@
 // Text format: https://developer.mozilla.org/en-US/docs/Web/API/WebVTT_API
-// Timestamps from https://spotscribe.io/episode/40874ea3ikx0LsNCglzekU
-document.getElementById('vtt-player').textTracks[0].mode = "showing";
+const video = document.getElementById('media-video');
+const prevVttText = document.getElementById('prev-vtt-text');
+const vttText = document.getElementById('vtt-text');
+const nextVttText = document.getElementById('next-vtt-text');
+const chapterList = document.getElementById('chapter-list');
 
-document.getElementById('vtt-player').textTracks[0].addEventListener('cuechange', function () {
-    let current_Vtt_Text = document.getElementById('vtt-text');
-    let prev_Vtt_Text = document.getElementById('prev-vtt-text');
-    let next_Vtt_Text = document.getElementById('next-vtt-text');
-    let allCues = this.cues;
+const chapters = [
+    { time: 0, label: 'Intro' },
+    { time: 35, label: 'Chapter 1' },
+    { time: 92, label: 'Chapter 2' },
+    { time: 157, label: 'Chapter 3' },
+    { time: 230, label: 'Conclusion' }
+];
 
-    current_Vtt_Text.style.transition = "none";
-    current_Vtt_Text.style.transform = "translateY(20px)";
-    current_Vtt_Text.style.opacity = "0";
+function renderChapters() {
+    chapterList.innerHTML = chapters.map((ch, index) => `
+        <li data-time="${ch.time}" data-index="${index}">${ch.label} (${ch.time}s)</li>
+    `).join('');
+
+    chapterList.addEventListener('click', (e) => {
+        if (e.target.tagName === 'LI') {
+            const time = Number(e.target.dataset.time);
+            video.currentTime = time;
+            video.play();
+            highlightChapter(Number(e.target.dataset.index));
+        }
+    });
+}
+
+function highlightChapter(index) {
+    document.querySelectorAll('.chapter-list li').forEach((li, i) => {
+        li.classList.toggle('active-chapter', i === index);
+    });
+}
+
+function setupVtt() {
+    if (!video.textTracks?.[0]) return;
     
-    prev_Vtt_Text.style.transition = "none";
-    prev_Vtt_Text.style.transform = "translateY(20px)";
-    prev_Vtt_Text.style.opacity = "0";
+    const track = video.textTracks[0];
+    track.addEventListener('cuechange', () => {
+        const cues = track.cues;
+        const active = track.activeCues[0];
 
-    next_Vtt_Text.style.transition = "none";
-    next_Vtt_Text.style.transform = "translateY(20px)";
-    next_Vtt_Text.style.opacity = "0";
-
-
-    if (this.activeCues && this.activeCues.length > 0) {
-        let currentCue = this.activeCues[0];
-        // Om de index te krijgen van de huidige ondertiteling heb ik de volgende links gebruikt: 
-        // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/from (pakt alle ondertiteling elementen, dus zinnen)
-        // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf (kiest alleen de cue die op dit moment de "huidige" cue moet zijn. De timestamps in de vtt file kiezen automatisch per zin welke op dat moment moet worden afgespeelt)
-        let currentIndex = Array.from(allCues).indexOf(currentCue);
-
-        current_Vtt_Text.innerHTML = currentCue.text;
-
-        if (currentIndex > 0) {
-            prev_Vtt_Text.innerHTML = allCues[currentIndex - 1].text;
+        if (active) {
+            const index = Array.from(cues).indexOf(active);
+            vttText.innerHTML = active.text;
+            prevVttText.innerHTML = index > 0 ? cues[index - 1].text : '';
+            nextVttText.innerHTML = index < cues.length - 1 ? cues[index + 1].text : '';
+        } else {
+            vttText.innerHTML = prevVttText.innerHTML = nextVttText.innerHTML = '';
         }
-        
-        if (currentIndex < allCues.length - 1) {
-            next_Vtt_Text.innerHTML = allCues[currentIndex + 1].text;
-        }
-    } else {
-        prev_Vtt_Text.innerHTML = "";
-        current_Vtt_Text.innerHTML = "";
-        next_Vtt_Text.innerHTML = "";
-    }
-    setTimeout(() => {
-        current_Vtt_Text.style.transition = "transform 0.4s ease-out, opacity 0.4s ease-out";
-        current_Vtt_Text.style.transform = "translateY(0px)";
-        current_Vtt_Text.style.opacity = "1";
+    });
+    
+    track.mode = 'hidden';
+}
 
-        prev_Vtt_Text.style.transition = "transform 0.4s ease-out, opacity 0.4s ease-out";
-        prev_Vtt_Text.style.transform = "translateY(0px)";
-        prev_Vtt_Text.style.opacity = "0.5";
-
-        next_Vtt_Text.style.transition = "transform 0.4s ease-out, opacity 0.4s ease-out";
-        next_Vtt_Text.style.transform = "translateY(0px)";
-        next_Vtt_Text.style.opacity = "0.5";
-    }, 20);
+document.addEventListener('DOMContentLoaded', () => {
+    video.src = 'uploads/SupernovaPodcast.m4a';
+    renderChapters();
+    setupVtt();
+    
+    video.addEventListener('timeupdate', () => {
+        const active = chapters.filter(ch => ch.time <= video.currentTime).pop();
+        if (active) highlightChapter(chapters.indexOf(active));
+    });
 });

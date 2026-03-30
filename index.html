@@ -3,22 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Podcast Layout</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
-    <div id="audio-container">
-        <audio id="vtt-player" controls src="uploads/SupernovaPodcast.m4a">
-            <track default kind="captions" label="captions" srclang="en" src="uploads/SupernovaPodcast.vtt" />
-        </audio>
-        <div id="text-container">
-            <div id="prev-vtt-text"></div>
-            <div id="vtt-text"></div>
-            <div id="next-vtt-text"></div>
-        </div>
-        
-    </div>
+    <main id="app">
+        <section id="video-box" class="panel panel-yellow">
+            <h2>Video</h2>
+            <video id="media-video" controls src="uploads/SupernovaPodcast.m4a" poster="" playsinline>
+                <track kind="captions" label="captions" srclang="en" src="uploads/SupernovaPodcast.vtt" />
+            </video>
+        </section>
+
+        <section id="audio-box" class="panel panel-red">
+            <h2>Chapters</h2>
+            <p>Click a chapter to jump in the video above.</p>
+            <ul id="chapter-list" class="chapter-list"></ul>
+        </section>
+
+        <section id="transcript-box" class="panel panel-green">
+            <h2>Transcript</h2>
+            <div id="transcript">
+                <p id="prev-vtt-text"></p>
+                <p id="vtt-text"></p>
+                <p id="next-vtt-text"></p>
+            </div>
+        </section>
+    </main>
+
+    <script src="index.js"></script>
 </body>
-<script src="/index.js"></script>
 </html>
