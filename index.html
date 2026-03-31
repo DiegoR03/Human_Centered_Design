@@ -10,7 +10,8 @@
     <main id="app">
         <section id="video-box" class="panel panel-yellow">
             <h2>Video</h2>
-            <video id="media-video" controls src="uploads/SupernovaPodcast.m4a" poster="" playsinline>
+            <p>Podcast - Astrum Space - We've never seen a supernova explode until now</p>
+            <video id="media-video" controls src="uploads/SupernovaPodcast.mp4" poster="" playsinline>
                 <track kind="captions" label="captions" srclang="en" src="uploads/SupernovaPodcast.vtt" />
             </video>
         </section>
@@ -21,13 +22,13 @@
             <ul id="chapter-list" class="chapter-list"></ul>
         </section>
 
-        <section id="transcript-box" class="panel panel-green">
+        <section id="transcript-box" class="panel">
             <h2>Transcript</h2>
             <div id="transcript">
-                <p id="prev-vtt-text"></p>
-                <p id="vtt-text"></p>
-                <p id="next-vtt-text"></p>
             </div>
+            <button id="sync-transcript">
+                Synchronise Text
+            </button>
         </section>
     </main>
 
