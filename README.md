@@ -163,6 +163,16 @@ Favoriete podcast zonder video?
 - The Handsome podcast, comedians.
 - De pims podcast
 
+## 02/04/2026
+- 10:30 tot 11:00 gesprek met Leonie
+- 11:00 tot 16:00 Zelfstandig werken
+<br>
+Gesprek met Leonie:
+<br>Tijdens het gesprek met Leonie heb ik kort mijn werkt uitgelegd. Ik heb bepaalde ontwerp keuzes onderbouwd waarom ik deze heb gemaakt en wat voor functie het heeft binnen de website. Ook heb ik daarnaast nog besproken wat er tijdens het gesprek met Darice is besproken. Bepaalde details waar ik op ga letten tijdens het verder ontwepren en coderen van mijn website, maar ook wat mijn goals zijn tot volgende dinsdag:
+- Ten eerste wil ik meer experimenteren met de lettertypes, ik wil meer met kleuren spelen om de toon van iemands stem aan te tonen, maar ook om de tekst wat beter leesbaar te maken.
+- Daarnaast wil ik ook met emojies werken (Op basis van de feedback van Darice) om aan te tonen wanneer de spreken van de podcast emoties toont.
+- Als laatst wil ik ook nog experimenteren met de achtergrond kleuren.
+
 
 
 
