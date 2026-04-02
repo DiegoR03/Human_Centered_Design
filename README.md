@@ -173,6 +173,9 @@ Gesprek met Leonie:
 - Daarnaast wil ik ook met emojies werken (Op basis van de feedback van Darice) om aan te tonen wanneer de spreken van de podcast emoties toont.
 - Als laatst wil ik ook nog experimenteren met de achtergrond kleuren.
 
+## Week 1
+Deze week heb ik al veel kunnen bereiken met mijn website. Ik heb tijdens mijn eerste gesprek meteen ene prototype kunnen laten zien aan Darice en heb zelfs verbeter punten kunnen vragen die ik binnen de eerste twee dagen heb kunnen verwerken. Ik ben zelf ook best verrast hoe ver ik ben gekomen in deze korte tijd en wil volgende week mijzelf echt uitdagen om meer te werken aan lettertypes en andere details. Ook wil ik voor het volgende gesprek nog een andere achtergrond kunnen maken zodat er duidelijkere feedback is voor Darice tijdens het lezen zonder dat zij zich hier direct op hoeft te focussen.
+
 
 
 
