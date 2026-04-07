@@ -8,8 +8,8 @@
     /* Colors */
     --background-color: #e4e4e4;
     --angry-highlight: #ff0000;
-    --happy-hightlight: #02c802;
-    --enthusiastic-highlight: #ffed46;
+    --happy-highlight: #02c802;
+    --enthusiastic-highlight: #f06e18;
     --sad-highlight: #5900ff;
 
     /* Elements */
@@ -20,10 +20,28 @@
     box-sizing: border-box;
 }
 
+@property --color-start {
+  syntax: '<color>';
+  inherits: false;
+  initial-value: #e4e4e4;
+}
+
+@property --color-end {
+  syntax: '<color>';
+  inherits: false;
+  initial-value: #e4e4e4;
+}
+
 body {
     margin: 0;
     min-height: 100vh;
-    background: var(--background-color);
+    background: linear-gradient(90deg, 
+        var(--color-start) 0%, 
+        var(--color-end)10%, 
+        var(--color-end) 90%, 
+        var(--color-start) 100%);
+    transition: --color-start 0.4s ease, --color-end 0.4s ease;
+    
     color: var(--text);
     font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
     display: flex;
@@ -32,12 +50,25 @@ body {
     padding: 1rem;
 }
 
-u {
-    color: var(--enthusiastic-highlight);
-    -webkit-text-stroke: 0.5px #ff0000;
+/* Aan gemini gevraagt hoe ik de .vtt tekst kan aanpassen aangezien ik het naar een 'text' zet in javascript */
+/* Antwoord: Omdat de browser de tekst in de HTML zet als <c.enthusiastic>, kun je dit in CSS direct aanspreken. Let op: omdat er een punt in de tag-naam staat, moet je in CSS een backslash gebruiken om die punt te "escapen". */
+.active-cue span {
     font-weight: 900;
-    font-size: 1.5rem;
+    font-size: 1.1rem;
     text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.active-cue .enthusiastic {
+    -webkit-text-stroke: 0.5px var(--enthusiastic-highlight);
+}
+
+.active-cue .happy {
+    -webkit-text-stroke: 0.5px var(--happy-highlight);
+}
+
+.active-cue .angry {
+    -webkit-text-stroke: 0.5px var(--angry-highlight);
 }
 
 #app {
@@ -114,7 +145,7 @@ section h2 {
     list-style: none;
     margin: 0.5rem 0 0;
     padding: 0;
-    max-height: 35vh;
+    max-height: 28vh;
     overflow-y: auto;
 }
 

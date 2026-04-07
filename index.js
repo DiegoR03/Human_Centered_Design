@@ -49,11 +49,19 @@ function setupVtt() {
     track.addEventListener('cuechange', () => {
         const cues = track.cues;
         if (cues && cues.length > 0 && transcriptContainer.children.length === 0) {
-            transcriptContainer.innerHTML = Array.from(cues).map((cue, index) => `
-                <div id="cue-${index}" style="margin-bottom: 5px; padding: 4px; border-radius: 4px; transition: all 0.3s ease;">
-                    ${cue.text}
-                </div>
-            `).join('');
+            transcriptContainer.innerHTML = Array.from(cues).map((cue, index) => {
+                // Ik moest helaas weer aan Gemini vragen hoe ik de <c> elementen in mijn .vt bestanden om kon zetten naar een tekst bestand zodat ik de classes kon aanpassen. OP dit moment veranderde hij het hele div bestand terwijl ik losse <span> elementen nodig had
+                // Antwoord: Om het omzetten van de VTT-tags naar echte HTML-spans te maken moet je de functie setupVtt aanpassen. Op dit moment wordt cue.text 1-op-1 in de HTML gezet. We gaan daar een .replace() tussenvoegen die de <c.enthusiastic> verandert in een <span class="enthusiastic">.
+                const formattedText = cue.text
+                    .replace(/<c\.(\w+)>/g, '<span class="$1">') 
+                    .replace(/<\/c>/g, '</span>');
+
+                return `
+                    <div id="cue-${index}" class="transcript-line" style="margin-bottom: 5px; padding: 4px; border-radius: 4px; transition: all 0.3s ease;">
+                        ${formattedText}
+                    </div>
+                `;
+            }).join('');
         }
     });
 }
@@ -80,13 +88,37 @@ function updateTranscriptHighlight() {
         if (span) {
             if (index === activeIndex) {
                 span.style.fontWeight = 'bold';
+                span.classList.add('active-cue');
                 span.style.opacity = '1';
+
+                const currentCueText = cues[index].text;
+
+                switch(true){
+                    case currentCueText.includes('.enthusiastic') : {
+                        document.body.style.setProperty('--color-start', '#bc571391');
+                        break;
+                    } 
+                    case currentCueText.includes('.happy') : {
+                        document.body.style.setProperty('--color-start', '#02c80291');
+                        break;
+                    } 
+                    case currentCueText.includes('.angry') : {
+                        document.body.style.setProperty('--color-start', '#ff000091');
+                        break;
+                    } 
+                    default: {
+                        document.body.style.setProperty('--color-start', '#e4e4e4');
+                        document.body.style.setProperty('--color-end', '#e4e4e4');
+                    }
+                }
+
 
                 if (!isUserScrolling) {
                     span.scrollIntoView({ behavior: 'smooth', block: 'center' });
                 }
             } else {
                 span.style.fontWeight = 'normal';
+                span.classList.remove('active-cue');
                 span.style.opacity = '0.6';
             }
         }
