@@ -176,6 +176,100 @@ Gesprek met Leonie:
 ## Week 1
 Deze week heb ik al veel kunnen bereiken met mijn website. Ik heb tijdens mijn eerste gesprek meteen ene prototype kunnen laten zien aan Darice en heb zelfs verbeter punten kunnen vragen die ik binnen de eerste twee dagen heb kunnen verwerken. Ik ben zelf ook best verrast hoe ver ik ben gekomen in deze korte tijd en wil volgende week mijzelf echt uitdagen om meer te werken aan lettertypes en andere details. Ook wil ik voor het volgende gesprek nog een andere achtergrond kunnen maken zodat er duidelijkere feedback is voor Darice tijdens het lezen zonder dat zij zich hier direct op hoeft te focussen.
 
+## Test 2 - 07/04/2026 - Darice
 
+### Ronde 1:
+- Is het duidelijk en niet afleidend?
+- Wil je de tekst die volgt alvast kunnen zien of alleen de huidige?
+- Wil je woorden zoals Um en Uh terug horen tijdens het lezen van de podcasts
+- Vind je dat er elementen missen of dat er iets aan de website ontbreekt waardoor het saaier maakt?
 
+- Wel fijn natuurlijk, het enige wat mist is de volledige tekst. Ze wilt verder of terug kunnen scrollen voor als zij niet snel genoeg kan lezen.
+- De tekst ervoor of erna in een lichtere kleur aangeven.
+- Wel fijn, het komt menselijk over en ze is het al gewent van toen ze nog wel kon horen en gesprekken kon houden.
+- Content duidelijk willen zien, gave website met animaties is wel fijn de eerste keer, maar daarna is functionaliteit wel belangrijker. 
+- En hoe zou je het op mobiel laten zien?
+- Het ene woord meer kracht geven is fijn.
 
+### Ronde 2:
+- Vind je het duidelijk als de achtergrond kleuren aangeeft in combinatie met de mood balk. Dus bijvoorbeeld als hij boos is, verandert de achtergrond kleur naar rood
+
+- Niet helemaal duidelijk hoe het op dit moment werkt. Eerlijk gezegd heb ik moeite met begrijpen wat je van plan bent. Het is niet heel leesbaar op dit moment. Ik zou graag een voorbeeld willen zien volgende keer.
+- Verder echt alleen de kleuren aanpassen van de website.
+
+### Ronde 3:
+- Wilt u helemaal geen ondertiteling, of wilt u de optie wel?
+
+- Ze mist wie wat zegt, er is geen beeld.
+- Tekst over de cover heen is onduidelijk en niet goed leesbaar.
+- Print functie voor tekst ook prima
+- Cover is al druk genoeg en kan dan niet goed focussen op tekst.
+
+### Ronde 4 (ik):
+- Video beter? Zo ja, groter of kleiner?
+- Website gloed duidelijk?
+
+- Ervaart video als goed
+- Achtergrond kleuren zijn fijn
+- Natuurlijk maar een spreker, dus emoties niet super relevant
+- Zo heel duidelijk en niet afleidend
+
+### Ronde 5: 
+- Zijn er specifieke kleuren die jij koppelt aan specifieke gebeurtenissen? Of is een legenda handiger die je van te voren even kort door kan nemen?
+- Als er te veel spannende momenten zijn, zijn te veel flashes vervelend?
+
+_ Ze heeft niet echt een associatie met kleuren
+- Kleuren in combinatie met een ondertiteling beter. 
+- De hele ervaring is zijn geheel is belangrijk.
+- Ze is geen fan van flashes, subtiele veranderingen zijn beter want dat leidt niet af.
+
+### Ronde 6:
+- Wilt u alleen lezen? Of wilt u ook weten welke emotie zijn hebben?
+- Zijn plaatjes van het persoon ook handig om toe te voegen?
+
+- Emoji's zijn prima, niet storend.
+- Hoewel ze geen associatie heeft met kleuren is de variatie van de kleuren wel fijn, het is overzichtelijk om te lezen.
+- Plaatjes zijn fijn, dan krijg je een beter beeld van wie praat.
+
+### Ronde 7 (Lisa):
+- Wat vindt u van het idee dat de achtergrond kleuren veranderen op basis van de film die afspeelt, een start scherm om informatie te krijgen over wat je krijgt, ondertiteling die in de video zelf zit en een betere ambience. De sfeer moet meer over worden gebracht.
+- Zijn er nog tips om te beginnen?
+
+- Op dit moment is het moeilijk om voor zich te zien, er verandert nog niet veel op de website, maar dit was ook aangegeven door Lisa
+- Het idee klinkt interessant en ze is heel benieuwd.
+- Zorg ervoor dat het niet te druk is, ze gaf aan dat het een kunst is om goed te krijgen. 
+- Ambient kleur op dit moment wel goed en niet afleidend, als het in combinatie met emoties gaat beter.
+
+### Ronde 8:
+- Is de animatie in de tekst (shake) te afleidend?
+- Is de subtiele animatie voor verrast zijn goed, of juist te afleidend?
+- Is het kleurverschil tussen achtergrond, tekst en emotie subtiel genoeg?
+
+- Goed voorbeeld van een subtiele animatie. Het is niet storend.
+- De animatie is niet heel goed te zien, mag iets duidelijker. Het is te subtiel.
+- Het contrast is goed genoeg.
+- Eerste voorbeeld van animatie (horizontale shake) was goed, maar de tweede shake (verticale shake) was te subtiel.
+
+### Ronde 9:
+- Vind u het fijn dat u de ondertiteling kan aanpassen qua lettertype?
+- Vindt u het ook fijn dat u de ondertiteling van taal kan aanpassen?
+- Is het contrast kleur duidelijk?
+- Is het ook duidelijk of de achtergrond tekst luid is of subtiel?
+- Soms is geluid storend, soms schrik je ook van het geluid, maar deze dingen kunnen niet bepaald subtiel. Mag de tekst dan wel vervelend zijn?
+
+- Ja ik vindt het fijn
+- Ik vind het ook fijn dat je de taal kan aapassen, al helemaal als je iets Engels kijkt.
+- De kleuren zijn duidelijk, er is een duidelijk contrast tussen de achtergrond tekst en de gesproken tekst.
+- Nee het is niet duidelijk hoe luid iets is, geef dat aan in de tekst zelf.
+- Je zou eerst achtergrond tekst kunnen doen en daarna subtiel op de achtergrond houden.
+- Dan kan het wel, bijvoorbeeld met de kleur rood.
+
+### Ronde 10:
+- Is een Arduino in koppeling met de website handig? Voor bijvoorbeeld trillingen?
+- Is een equalizer van toepassen of heeft dan geen meer waarde?
+
+- Tekst mag iets groter
+- Overgang van geluid naar gesproken tekst was niet heel duidelijk
+- Ze moet op dit moment meer concentreren op de tekst dan op de video.
+- Als die Arduino mogelijk is, dan zou dat top zijn. Zij vindt IMAX leuk en het lijkt het heel interessant.
+- Een equalizer is een moeilijk ding, het zou wel kunnen werken.
