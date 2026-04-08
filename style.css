@@ -7,10 +7,12 @@
 
     /* Colors */
     --background-color: #e4e4e4;
+    --transcript-background: #ffffffe6;
     --angry-highlight: #ff0000;
     --happy-highlight: #02c802;
     --enthusiastic-highlight: #f06e18;
     --sad-highlight: #5900ff;
+    --header-color: #111827;
 
     /* Elements */
     --container-width: 50%;
@@ -109,7 +111,7 @@ panel h2,
 section h2 {
     margin: 0 0 0.6rem;
     font-size: 1rem;
-    color: #111827;
+    color: var(--header-color);
 }
 
 #video-box video,
@@ -119,11 +121,10 @@ section h2 {
 }
 
 #transcript {
-    background: rgba(255, 255, 255, .9);
+    background: var(--transcript-background);
     border-radius: 6px;
     padding: 1rem;
-    min-height: 95%;
-    max-height: 80vh;
+    min-height: 88%;
     overflow-y: auto;
 }
 
@@ -205,3 +206,25 @@ section h2 {
             "audio-box";
     }
 }
+
+/* @media (prefers-color-scheme: dark){
+    :root{
+        --text: #ececec;
+        --panel-bg: #676767;
+        --shadow: 0 10px 28px rgba(221, 221, 221, 0.256);
+        --transcript-background: #555555e6;
+        --header-color: #436abe;
+    }
+
+    @property --color-start {
+        syntax: '<color>';
+        inherits: false;
+        initial-value: #0f0f0f;
+    }
+
+    @property --color-end {
+        syntax: '<color>';
+        inherits: false;
+        initial-value: #0f0f0f;
+    }
+} */
