@@ -3,6 +3,7 @@ const video = document.getElementById('media-video');
 const transcriptContainer = document.getElementById('transcript');
 const chapterList = document.getElementById('chapter-list');
 const syncBtn = document.getElementById('sync-transcript'); 
+const slider = document.getElementById("myRange");
 let isUserScrolling = false;
 let scrollTimeout = null;
 
@@ -66,6 +67,25 @@ function setupVtt() {
     });
 }
 
+const _interpSpeed = 1.5; 
+
+setInterval(() => {
+    if (slider.newValue === undefined) return;
+
+    let currentValue = parseFloat(slider.value);
+    let targetValue = slider.newValue;
+    let delta = targetValue - currentValue;
+
+    if (Math.abs(delta) < _interpSpeed) {
+        slider.value = targetValue;
+        delete slider.newValue;
+        return;
+    }
+
+    let sign = delta / Math.abs(delta);
+    slider.value = currentValue + (sign * _interpSpeed);
+}, 1000 / 60);
+
 function updateTranscriptHighlight() {
     const track = video.textTracks?.[0];
     if (!track || !track.cues || track.cues.length === 0) {
@@ -96,19 +116,22 @@ function updateTranscriptHighlight() {
                 switch(true){
                     case currentCueText.includes('.enthusiastic') : {
                         document.body.style.setProperty('--color-start', '#bc571391');
+                        slider.newValue = 30;
                         break;
                     } 
                     case currentCueText.includes('.happy') : {
                         document.body.style.setProperty('--color-start', '#02c80291');
+                        slider.newValue = 90;
                         break;
                     } 
                     case currentCueText.includes('.angry') : {
                         document.body.style.setProperty('--color-start', '#ff000091');
+                        slider.newValue = 10;
                         break;
                     } 
                     default: {
-                        document.body.style.setProperty('--color-start', '#e4e4e4');
-                        document.body.style.setProperty('--color-end', '#e4e4e4');
+                        document.body.style.setProperty('--color-start', 'default');
+                        document.body.style.setProperty('--color-end', 'default');
                     }
                 }
 
@@ -154,5 +177,18 @@ document.addEventListener('DOMContentLoaded', () => {
         const activeChapter = chapters.filter(chapter => chapter.time <= video.currentTime).pop();
         if (activeChapter) highlightChapter(chapters.indexOf(activeChapter));
         updateTranscriptHighlight();
+    });
+});
+
+// Selecteer alle h2 elementen met de class 'collapsible'
+const collapsibles = document.querySelectorAll('.collapsible');
+
+collapsibles.forEach(header => {
+    header.addEventListener('click', function() {
+        // Zoek het ouder-element (de <section class="panel">)
+        const panel = this.parentElement;
+        
+        // Toggle de 'collapsed' class op de panel
+        panel.classList.toggle('collapsed');
     });
 });

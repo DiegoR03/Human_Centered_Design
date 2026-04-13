@@ -8,23 +8,30 @@
 </head>
 <body>
     <main id="app">
-        <section id="video-box" class="panel panel-yellow">
-            <h2>Video</h2>
-            <p>Podcast - Astrum Space - We've never seen a supernova explode until now</p>
-            <video id="media-video" controls src="uploads/SupernovaPodcast.mp4" poster="" playsinline>
-                <track kind="captions" label="captions" srclang="en" src="uploads/SupernovaPodcast.vtt" />
-            </video>
+        <section id="video-box" class="panel">
+            <h2 class="collapsible">Video</h2>
+            <div class="content">
+              <p>Podcast - Astrum Space - We've never seen a supernova explode until now</p>
+                <video id="media-video" controls src="uploads/SupernovaPodcast.mp4" poster="" playsinline>
+                    <track kind="captions" label="captions" srclang="en" src="uploads/SupernovaPodcast.vtt" />
+                </video>  
+            </div>
+            
         </section>
 
-        <section id="audio-box" class="panel panel-red">
-            <h2>Chapters</h2>
-            <p>Click a chapter to jump in the video above.</p>
-            <ul id="chapter-list" class="chapter-list"></ul>
+        <section id="audio-box" class="panel">
+            <h2 class="collapsible">Chapters</h2>
+            <div class="content">
+                <p>Click a chapter to jump in the video above.</p>
+                <ul id="chapter-list" class="chapter-list"></ul>
+            </div>
         </section>
 
         <section id="transcript-box" class="panel">
             <h2>Transcript</h2>
-            <p>Emotie: </p>
+            <div class="slidecontainer">
+                <input type="range" min="1" max="100" value="50" class="slider" id="myRange" disabled>
+            </div>
             <div id="transcript">
             </div>
             <button id="sync-transcript">
@@ -35,4 +42,5 @@
 
     <script src="index.js"></script>
 </body>
+
 </html>
