@@ -105,6 +105,8 @@ body {
 #transcript-box {
     grid-area: transcript-box;
     background: transparent;
+    overflow: hidden;
+    height: 100%;
 }
 
 panel h2,
@@ -124,8 +126,9 @@ section h2 {
     background: var(--transcript-background);
     border-radius: 6px;
     padding: 1rem;
-    min-height: 88%;
+    height: 78vh;
     overflow-y: auto;
+    overflow-x: hidden;
 }
 
 #transcript p {
@@ -207,24 +210,28 @@ section h2 {
     }
 }
 
-/* @media (prefers-color-scheme: dark){
+@media (prefers-color-scheme: dark){
     :root{
         --text: #ececec;
-        --panel-bg: #676767;
+        --panel-bg: #121212;
         --shadow: 0 10px 28px rgba(221, 221, 221, 0.256);
         --transcript-background: #555555e6;
         --header-color: #436abe;
     }
 
+    #video-box, #audio-box, #transcript-box {
+        background: var(--panel-bg);
+    }
+
     @property --color-start {
         syntax: '<color>';
         inherits: false;
-        initial-value: #0f0f0f;
+        initial-value: #212121;
     }
 
     @property --color-end {
         syntax: '<color>';
         inherits: false;
-        initial-value: #0f0f0f;
+        initial-value: #212121;
     }
-} */
+}
