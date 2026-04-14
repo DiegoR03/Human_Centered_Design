@@ -273,3 +273,49 @@ _ Ze heeft niet echt een associatie met kleuren
 - Ze moet op dit moment meer concentreren op de tekst dan op de video.
 - Als die Arduino mogelijk is, dan zou dat top zijn. Zij vindt IMAX leuk en het lijkt het heel interessant.
 - Een equalizer is een moeilijk ding, het zou wel kunnen werken.
+
+## 14/04/2026 - Darice
+Test 3
+
+## Ronde 1:
+[Gemist ivm met OV]
+
+## Ronde 2:
+Ondertiteling is klein, graag wat groter
+Verder nog niets nieuws.
+
+Achtergrond veranderd van kleur voor contrast, wel interessant.
+
+## Ronde 3: (ik)
+- Is de emotie meter duidelijk? Of ziet u graag veranderingen?
+
+Zij heeft niet veel met kleuren, zij ziet ehet liefst wat neutralere kleuren sinds de podcast die ik heb gekozen inet veel emoties heeft.
+
+Ook graag wat duidelijker en groter als mogelijk is, dan hoeft ze niet steeds op en neer te kijken.
+
+- Zijn de chapters zelf ook duidelijk? En dat je het in kan klappen?
+
+Ja het ziet er duidelijk uit. (Ze moest het nog even een keer zien hoe het werkte.) Ja, heel duidelijk, fijn dat het ook zo werkt.
+
+## Ronde 4:
+- Is de verandering fijner?
+
+De kleuren modus is het beste, (ivm met contrast). Elke zin een andere kleur geven is duidelijker.
+De 'achtergrond geluiden' omgezet naar tekst is heel fijn en zorgt voor extra detail.
+
+Intro van de podcast is ook fijn om te hebben zodat de lezer weet waar het over gaat.
+
+## Ronde 5:
+Verwoording is belangrijk als het gaat om extra informatie.
+Ook is de kleur van de tekst en de leesbaarheid heel belangrijk als het gaat om tekstboxen.
+
+## Ronde 6:
+- Wilt weten of het geluid duidelijk is.
+
+Tekst die midden in het scherm groter wordt is fijn, het is allemaal best goed bij elkaar. De ondertiteling mag wel wat naar boven zodat het nog compacter is als één geheel en makkelijk te lezen is.
+Misschien ook nog met een kleurtje
+
+## Ronde 7:
+Meer met het beeld werken dan met de ondertiteling zodat het meer opvalt. De ondertiteling verandering is moeilijk te zien.
+
+Ze wilt misschien dat het beeld zelf bijvoorbeeld een beetje inzoomt, of een beetje schud.
