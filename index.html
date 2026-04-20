@@ -28,7 +28,33 @@
         </section>
 
         <section id="transcript-box" class="panel">
+            <div id="settings-container">
+                <button id="transcript-settings" onclick="showSettings()"></button>
+            </div>
+
             <h2>Transcript</h2>
+
+            <div id="settings-box" class="panel">
+                <h2>Transcript Settings</h2>
+                <div class="settings-item">
+                    <label for="font-size-slider">Adjust font Size</label>
+                    <div class="slider-container">
+                        <input type="range" id="font-size-slider" min="16" max="40" value="16">
+                        <span id="font-size-value">16px</span>
+                    </div>
+                </div>
+
+                <div class="settings-item">
+                    <input type="checkbox" id="emotion-slider-toggle">  
+                    <label for="emotion-slider-toggle">Show Emotion Slider</label>
+                </div>
+
+                <div class="settings-item">
+                    <input type="checkbox" id="real-full-toggle">  
+                    <label for="real-full-toggle">Read full text</label>
+                </div>
+                
+            </div>
             <div class="slidecontainer">
                 <input type="range" min="1" max="100" value="50" class="slider" id="myRange" disabled>
             </div>
