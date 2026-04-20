@@ -274,6 +274,21 @@ _ Ze heeft niet echt een associatie met kleuren
 - Als die Arduino mogelijk is, dan zou dat top zijn. Zij vindt IMAX leuk en het lijkt het heel interessant.
 - Een equalizer is een moeilijk ding, het zou wel kunnen werken.
 
+## 13/03/2026
+- 09:30 Portfolio gewerkt
+- 12:30 Pauze
+- 13:00 Zelfstandig werken
+- 14:00 Gewerkt aan HCD
+- 16:00 Portfolio werk
+<br>
+Checkout: <br>
+Ik heb vandaag vanuit huisgewerkt en helaas niet zo super veel bereikt als ik zou willen i.v.m het werken aan een portfolio website. Ik vond persoonlijk dat deze voorrang had sinds ik binnenkort moet zoeken naar stage. <br>
+Wat ik vandaag wel heb kunnen doen is een emotie meter maken die zich aanpast op de emoties die worden vertoont in de video en vtt bestand. Omdat ik verschillende classes heb in mijn vtt bestand in de vorm van `<c.happy>` en andere emoties, kan ik deze aanroepen en dan verschillende values meegeven in javascript: <br>
+<img width="899" height="561" alt="image" src="https://github.com/user-attachments/assets/4e004948-4f73-445b-800c-cb1cd3d88725" />
+<br>
+Dan bij elke verschillende emotie heb ik in de emotie meter verschillende values meegegeven zodat je snel in één oogopslag ziet welke emotie wordt vertoont: <br>
+<img width="404" height="90" alt="image" src="https://github.com/user-attachments/assets/0338574a-2c94-4ee7-969c-8a8c95a2b155" />
+
 ## 14/04/2026 - Darice
 Test 3
 
@@ -319,3 +334,40 @@ Misschien ook nog met een kleurtje
 Meer met het beeld werken dan met de ondertiteling zodat het meer opvalt. De ondertiteling verandering is moeilijk te zien.
 
 Ze wilt misschien dat het beeld zelf bijvoorbeeld een beetje inzoomt, of een beetje schud.
+
+## 20/04/2026
+- 09:30 Check in met Vasilis
+- 10:30 Zelfstandig werken
+- 11:30 Box-sizing gefixed
+- 12:30 pauze
+- 13:00 Verder zelfstandig werken
+- 13:45 Begonnen aan settings
+- 16:00 Checkout
+<br>
+Checkout met Romy: <br>
+Vandaag heb ik verassend veel gedaan binnen mijn website. Ik ben begonnen met de boxsizing verbeteren, toen ik begon stonden veel elementen scheef of pastten niet in hun grid-area: <br>
+<img width="370" height="271" alt="image" src="https://github.com/user-attachments/assets/ddf18849-404f-4d5e-9fe3-8051f0c72adf" /> <br>
+Hoewel het niet veel regels verscil was, kostte het mij wel ebst wat moeite om uit te vogelen. Zelf met behulp van Gemini lukte het niet dus moest ik het zelf uitzoeken, maar het kostte best wat tijd helaas.
+<br><br>
+Daarna ben ik verder gegaan met het toevoegen van animaties. Ik wilde meerdere animaties hebben in de tekst zelf om aan te geven wanneer er bepaalde emoties plaats vinden. Bijvoorbeeld emt happy springt de tekst, met serieus trilt eht een beetje, etc. Op dit moment heb ik één animatie uitgewerkt, en dat is enthusiastic: <br>
+<img width="346" height="116" alt="c8d2073e7f34f843f34fc976045d64b7-ezgif com-video-to-gif-converter" src="https://github.com/user-attachments/assets/da83c6de-f091-4e6d-bf91-b7d1356f209f" /> <br>
+Ik ben van plan om te volgende animaties nog toe te voegen:
+- Happy: Dancing
+- Serious: Trillen
+- Sad: Droopy
+
+<br> Als laatste ben ik bezig geweest met een settings pannel. Ik wilde Darice meerdere setting mogelijkheden geven, zij had bij andere gesprekken emt andere studenten aangegeven dat zij een settingspanel wel fijn vindt. Dit houd dan in dat ze de tekstgrootte wilt aanpassen, verschillende kleuren en andere settings, op dit moment heb ik de volgende settings:
+- Adjust font size
+- Show emotion meter
+- Read full text (Dan kan je alles lezen zonder een opacity: 0.3;)
+
+Op dit moment ziet dat er zo uit: <br>
+<img width="800" height="650" alt="1b1093bdec6807d064c91a9b7caf58a7-ezgif com-video-to-gif-converter" src="https://github.com/user-attachments/assets/c929f7b3-3d98-4f87-b9fb-3620f80efe21" />
+<br> Ik ben van plan om de volgende settings nog te maken:
+- Kleuren kiezer (Per emotie)
+- Light/Dark mode
+- Grid kiezer (Kiezen waar elke panel staat)
+- Chapter toggeler
+
+
+
