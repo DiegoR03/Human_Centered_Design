@@ -203,7 +203,7 @@ function updateVisualTheme(text) {
             slider.newValue = 75;
             break;
         default:
-            document.body.style.setProperty('--color-start', 'initial');
+            document.body.style.setProperty('--color-start', 'var(--background-color)');
             break;
     }    
 }
@@ -277,5 +277,14 @@ document.getElementById('real-full-toggle').addEventListener('change', function(
     } else {
         transcript.classList.remove('show-all');
         updateTranscriptHighlight();
+    }
+});
+
+// Darkmode 
+document.getElementById('dark-mode-toggle').addEventListener('change', function() {
+    if (this.checked) {
+        document.body.classList.add('dark-mode');
+    } else {
+        document.body.classList.remove('dark-mode');
     }
 });

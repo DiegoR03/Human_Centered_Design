@@ -1,7 +1,7 @@
 :root {
     --text: #1f2937;
     --panel-bg: whitesmoke;
-    --shadow: 0 10px 28px rgba(0, 0, 0, .08);
+    --shadow: 0 10px 28px #00000014;
     --border-radius: 8px;
 
     /* Colors */
@@ -25,22 +25,26 @@
 
 @property --color-start {
     syntax: '<color>';
-    inherits: false;
+    inherits: true;
     initial-value: #e4e4e4;
 }
 
 @property --color-end {
     syntax: '<color>';
-    inherits: false;
+    inherits: true;
     initial-value: whitesmoke;
 }
 
 body {
     margin: 0;
     min-height: 100vh;
+
+    --color-start: #e4e4e4;
+    --color-end: whitesmoke;
+
     background: linear-gradient(90deg,
             var(--color-start) 0%,
-            var(--color-end)10%,
+            var(--color-end) 10%,
             var(--color-end) 90%,
             var(--color-start) 100%);
     transition: --color-start 0.4s ease, --color-end 0.4s ease;
@@ -50,6 +54,24 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+body.dark-mode {
+    --color-start: #1a1a1a; 
+    --color-end: #121212;
+
+    --text: #ececec;
+    --panel-bg: #121212;
+    --shadow: 0 10px 28px rgba(221, 221, 221, 0.256);
+    --transcript-background: #555555e6;
+    --header-color: #436abe;
+    --background-color: #1a1a1a;
+
+    #video-box,
+    #audio-box,
+    #transcript-box {
+        background: var(--panel-bg);
+    }
 }
 
 /* MARK: App Container */
@@ -221,7 +243,7 @@ section h2 {
     position: absolute;
     top: 0;
     left: calc(100% - 3%);
-    width: 250px;
+    width: 15rem;
     z-index: 10;
     background: var(--panel-bg);
     border-radius: var(--border-radius);
@@ -428,34 +450,5 @@ section h2 {
 
     #sync-transcript {
         position: relative;
-    }
-}
-
-@media (prefers-color-scheme: dark) {
-    :root {
-        --text: #ececec;
-        --panel-bg: #121212;
-        --shadow: 0 10px 28px rgba(221, 221, 221, 0.256);
-        --transcript-background: #555555e6;
-        --header-color: #436abe;
-    }
-
-
-    #video-box,
-    #audio-box,
-    #transcript-box {
-        background: var(--panel-bg);
-    }
-
-    @property --color-start {
-        syntax: '<color>';
-        inherits: false;
-        initial-value: #212121;
-    }
-
-    @property --color-end {
-        syntax: '<color>';
-        inherits: false;
-        initial-value: #252525;
     }
 }
