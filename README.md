@@ -369,5 +369,83 @@ Op dit moment ziet dat er zo uit: <br>
 - Grid kiezer (Kiezen waar elke panel staat)
 - Chapter toggeler
 
+## 21/04/2026 - Test 4 - Darice
+
+Lekker kort allemaal.
+
+Ronde 1:
+- Is de achtergrond hue duidelijk? Is de tekst ook duidelijk zo? (Iets irritanter)
+
+- Het is goed zo!
+
+Ronde 2:
+- Is de tekst groot genoeg?
+
+- Ja groot genoeg, omschrijving en achtergrond is goed. Maar de top moet wel 'fixed' blijven, anders moet je steeds scrollen.
+
+Ronde 3:
+- Geeft de hue om de video heen een betere ervaring of zorgt het juist voor afleiding?
+- Animatie op de video (kleine sprong)
+
+- De kleuren zijn leuk, maar voor de tekst zijn sommige omschrijvingen best dubbel. Bijvoorbeeld de (thinking outloud).
+- Animatie is een beetje storend als je moet kijken. Maar de eerste animatie (Power Off Shake) is wel goed, want daar gebeurt iets dramatisch en belangrijk.
+
+Ronde 4:
+- Zijn deze nieuw onderdelen (settings, progressie bar) fijn op het oog?
+- Is wat meer styling op de tekst zelf fijn (Animaties, kleuren, etc)
+
+- Tracker is fijn om te zien wanneer je naar de volgende zin gaat.
+- Overgang naar volgende zin (animatie) is ook fijn.
+- Context voor de tekst is belangrijk, dus het is fijn om terug te kunnen lezen.
+- Ze mist het niet, maar ze zou het wel leuk/fijn vinden. Het zou kunnen passen.
+
+Ronde 5 (ik):
+- Welke settings mis je?
+- Zou je zelf de kleuren in willen stellen?
+- Welke animaties zou je fijn vinden?
+
+- Ik mis geen settings en animaties, het is goed zo!
+- Het liefst stel ik zelf geen kleuren in, dat is best veel werk om elke keer opnieuw te kunnen instellen.
+
+Ronde 6: 
+- Zijn de hue kleuren/flashes zo goed of zijn ze te wild?
+
+- Het is wel goed zo, maar ze flitsen best wel wat. Het kan best afleidend zijn.
+
+Ronde 7:
+- Feedback?
+- Wat voor functies zou je het liefst tijdens het lezen van de tekst willen hebben?
+
+- De feedback onder de 'video' zelf is overbodig, verder vindt ze het heel goed. Het is misschien wel handig om elk persoon een naam te geven, nu zijn het alleen kleuren.
+- Zo is het goed.
+
+Ronde 8:
+- Is de sprekersgid duidelijk zo?
+- Zitten de emoties op een goede plaats (Rechts boven in)
+
+- De sprekersgids is veel duidelijker zo (dan eerst)
+- Ja het zit goed zo, goede locatie.
+
+Ronde 9:
+- Is de audio visualisatie duidelijk? Ik heb het nu aan kleuren en intensiteit gelinked, maar ik wilde uw mening vragen over de huidige keuzes
+
+- Kleuren zijn heel moeilijk te intrepeteren, ik voel de effecten van de kleuren niet... 
+- De balken die je hebt verzonnen zijn wel duidelijker... misschien dat je die onderaan kan zetten. (Zijn die dan niet afleidend). Nee voor mij is het prima en duidelijk. De combinatie van zowel deze achtergrond, als de kleuren en de ondertiteling maakt het duidelijker.
+
+Ronde 10:
+- De sprekers hebben aparte kleuren, vindt je dat fijn?
+- Wi je zelf kleuren kunnen kiezen
+- Is er andere feedback?
+
+- Ja, maar in light mode zijn ze slecht leesbaar, iets donkere kleuren geven.
+- Een legenda is beter dan zelf kleuren kunnen kiezen.
+- Iets meer omschrijving van tonen, er is een smiley, maar er mag iets meer. Verder is het goed.
+
+Ronde 11:
+- Heeft u nog opmerkingen?
+
+- Nee, niet echt. Werken de standen wel (Kleuren). Ah, nu snapt ze het.
+- Het is verder duidelijk zo.
+
 
 
