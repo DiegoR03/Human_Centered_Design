@@ -1,4 +1,5 @@
 // Text format: https://developer.mozilla.org/en-US/docs/Web/API/WebVTT_API
+// MARK: Values
 const video = document.getElementById('media-video');
 const transcriptContainer = document.getElementById('transcript');
 const chapterList = document.getElementById('chapter-list');
@@ -28,6 +29,7 @@ let easingFactor = 1;
 let isUserScrolling = false;
 let scrollTimeout = null;
 
+// MARK: Functions
 function renderChapters() {
     chapterList.innerHTML = chapters.map((chapter, index) => `
         <li data-time="${chapter.time}" data-index="${index}">${chapter.label} (${chapter.time}s)</li>
@@ -220,18 +222,55 @@ function setupScrollingInteractions() {
     transcriptContainer.addEventListener('touchmove', handleUserScroll);
 
     if (syncBtn) {
-        syncBtn.addEventListener('click', () => {
-            isUserScrolling = false;
-            syncBtn.style.display = 'none';
-            updateTranscriptHighlight(); 
+    syncBtn.addEventListener('click', () => {
+        isUserScrolling = false;
+        syncBtn.style.display = 'none';
+        document.querySelectorAll('.active-cue').forEach(element => element.classList.remove('active-cue'));
+        
+        updateTranscriptHighlight(); 
+    });
+}
+}
+
+// Kleuren kiezer, met behulp van gemini
+// Antwoord: In plaats van complexe logica te schrijven om elk los element te kleuren, passen we de kleur op één centrale plek aan (het body-element), waardoor alle gerelateerde onderdelen—zoals de transcript-highlights en de emotie-slider—automatisch mee veranderen.
+function setupColorPickers() {
+    const colorConfigs = [
+        { id: 'color-enthusiastic', variable: '--enthusiastic-color' },
+        { id: 'color-happy', variable: '--happy-color' },
+        { id: 'color-serious', variable: '--serious-color' },
+        { id: 'color-sad', variable: '--sad-color' }
+    ];
+
+    colorConfigs.forEach(config => {
+        const picker = document.getElementById(config.id);
+        
+        const currentColor = getComputedStyle(document.body).getPropertyValue(config.variable).trim();
+        if (currentColor) picker.value = currentColor;
+
+        picker.addEventListener('input', (e) => {
+            const newColor = e.target.value;
+            document.body.style.setProperty(config.variable, newColor);
+            updateTranscriptHighlight();
         });
+    });
+}
+
+function showSettings() {
+    const settingsBox = document.getElementById('settings-box');    
+    if (settingsBox.style.display === 'block') {
+        settingsBox.style.display = 'none';
+    } else {
+        settingsBox.style.display = 'block';
     }
 }
 
+// MARK: Eventlisteners
 document.addEventListener('DOMContentLoaded', () => {
     renderChapters();
     setupVtt();
     setupScrollingInteractions();
+    setupColorPickers();
     
     video.addEventListener('timeupdate', () => {
         const activeChapter = chapters.filter(chapter => chapter.time <= video.currentTime).pop();
@@ -246,16 +285,6 @@ collapsibles.forEach(header => {
         panel.classList.toggle('collapsed');
     });
 });
-
-// MARK: Settings
-function showSettings() {
-    const settingsBox = document.getElementById('settings-box');    
-    if (settingsBox.style.display === 'block') {
-        settingsBox.style.display = 'none';
-    } else {
-        settingsBox.style.display = 'block';
-    }
-}
 
 fontSizeSlider.addEventListener("input", () => {
     const fontSize = fontSizeSlider.value;
@@ -280,7 +309,6 @@ document.getElementById('real-full-toggle').addEventListener('change', function(
     }
 });
 
-// Darkmode 
 document.getElementById('dark-mode-toggle').addEventListener('change', function() {
     if (this.checked) {
         document.body.classList.add('dark-mode');
