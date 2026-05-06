@@ -505,3 +505,10 @@ function setupColorPickers() {
 }
 ```
 
+## Bronnenlijst
+- https://gemini.google.com/app?hl=nl
+- https://developer.mozilla.org/en-US/docs/Web/API/WebVTT_API
+- https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_custom_scrollbar
+- https://www.w3schools.com/howto/howto_js_rangeslider.asp
+- https://open.spotify.com/episode/40874ea3ikx0LsNCglzekU?si=f44870844de44efc
+- https://spotscribe.io/
