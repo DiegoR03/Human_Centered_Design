@@ -236,6 +236,24 @@ section h2 {
         animation: bounce 0.6s ease-out infinite alternate;
         animation-delay: calc(var(--span-index) * 0.1s);
     }
+
+    .happy .character-span {
+        display: inline-block;
+        animation: happy 0.6s ease-in-out infinite alternate;
+        animation-delay: calc(var(--span-index) * 0.1s);
+    }
+
+    .serious .character-span {
+        display: inline-block;
+        animation: shake 0.1s ease-in-out infinite alternate;
+        animation-delay: calc(var(--span-index) * 0.01s);
+    }
+
+    .sad .character-span {
+        display: inline-block;
+        animation: sad 0.6s ease-in-out infinite alternate;
+        animation-delay: calc(var(--span-index) * 0.1s);
+    }
 }
 
 /* MARK: Settings */
@@ -362,9 +380,14 @@ section h2 {
     -webkit-text-stroke: 0.5px var(--serious-color);
 }
 
+.active-cue .sad {
+    -webkit-text-stroke: 0.5px var(--sad-color);
+}
+
 .enthusiastic,
 .happy,
-.angry {
+.serious,
+.sad {
     display: inline;
     white-space: normal;
     word-wrap: break-word;
@@ -454,6 +477,26 @@ section h2 {
 @keyframes bounce {
     to {
         transform: translateY(-2px);
+        font-size: 1.3rem;
+    }
+}
+
+@keyframes happy {
+    to {
+        text-shadow: 1px 1px 10px #ddff00, 1px 1px 10px #ccc;
+        font-size: 1.05rem;
+    }
+}
+
+@keyframes shake {
+    to {
+        transform: translateX(-1px);
+    }
+}
+
+@keyframes sad {
+    to {
+        rotate: 30deg;
     }
 }
 

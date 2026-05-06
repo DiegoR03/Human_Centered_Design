@@ -161,7 +161,7 @@ function updateTranscriptHighlight() {
                 updateVisualTheme(cues[index].text);
             }
 
-            const specialSpans = span.querySelectorAll('.enthusiastic, .happy, .angry');
+            const specialSpans = span.querySelectorAll('.enthusiastic, .happy, .serious, .sad');
             specialSpans.forEach(specialSpan => {
                 if (specialSpan.getAttribute('data-split') !== 'true') {
                     const text = specialSpan.textContent;
