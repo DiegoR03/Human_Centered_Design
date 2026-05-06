@@ -292,7 +292,7 @@ Dan bij elke verschillende emotie heb ik in de emotie meter verschillende values
 ## 14/04/2026 - Darice
 Test 3
 
-## Ronde 1:
+### Ronde 1:
 [Gemist ivm met OV]
 
 ## Ronde 2:
@@ -301,7 +301,7 @@ Verder nog niets nieuws.
 
 Achtergrond veranderd van kleur voor contrast, wel interessant.
 
-## Ronde 3: (ik)
+### Ronde 3: (ik)
 - Is de emotie meter duidelijk? Of ziet u graag veranderingen?
 
 Zij heeft niet veel met kleuren, zij ziet ehet liefst wat neutralere kleuren sinds de podcast die ik heb gekozen inet veel emoties heeft.
@@ -312,7 +312,7 @@ Ook graag wat duidelijker en groter als mogelijk is, dan hoeft ze niet steeds op
 
 Ja het ziet er duidelijk uit. (Ze moest het nog even een keer zien hoe het werkte.) Ja, heel duidelijk, fijn dat het ook zo werkt.
 
-## Ronde 4:
+### Ronde 4:
 - Is de verandering fijner?
 
 De kleuren modus is het beste, (ivm met contrast). Elke zin een andere kleur geven is duidelijker.
@@ -320,17 +320,17 @@ De 'achtergrond geluiden' omgezet naar tekst is heel fijn en zorgt voor extra de
 
 Intro van de podcast is ook fijn om te hebben zodat de lezer weet waar het over gaat.
 
-## Ronde 5:
+### Ronde 5:
 Verwoording is belangrijk als het gaat om extra informatie.
 Ook is de kleur van de tekst en de leesbaarheid heel belangrijk als het gaat om tekstboxen.
 
-## Ronde 6:
+### Ronde 6:
 - Wilt weten of het geluid duidelijk is.
 
 Tekst die midden in het scherm groter wordt is fijn, het is allemaal best goed bij elkaar. De ondertiteling mag wel wat naar boven zodat het nog compacter is als één geheel en makkelijk te lezen is.
 Misschien ook nog met een kleurtje
 
-## Ronde 7:
+### Ronde 7:
 Meer met het beeld werken dan met de ondertiteling zodat het meer opvalt. De ondertiteling verandering is moeilijk te zien.
 
 Ze wilt misschien dat het beeld zelf bijvoorbeeld een beetje inzoomt, of een beetje schud.
@@ -447,5 +447,61 @@ Ronde 11:
 - Nee, niet echt. Werken de standen wel (Kleuren). Ah, nu snapt ze het.
 - Het is verder duidelijk zo.
 
+## 05/05/2026
+- 09:30 Zelfstandig werken
+- 11:30 even kort boodschappen gedaan en andere bezigheden thuis
+- 14:00 Zelfstandig werken
+- 15:00 Kort aan HCD
+- 17:15 Zelfstandiug werken aan API
+- 20:30 Verder werken
+- 23:00 Afronden
 
+Uitleg:
+Vandaag heb ik maar heel kort gewerkt aan HCD< ik heb wat hotfixes gemaakt zoals het synchroniseren en heb ook een kleuren kiezer gemaakt. De synchroniseer button deed het niet meer omdat het scrollen steeds was gelocked, dus dit heb ik opgelost door elke keer een nieuwe 'actieve cue' aan te roepen: 
+```
+ syncBtn.addEventListener('click', () => {
+        isUserScrolling = false;
+        syncBtn.style.display = 'none';
+        document.querySelectorAll('.active-cue').forEach(element => element.classList.remove('active-cue'));
+        
+        updateTranscriptHighlight(); 
+    });
+```
+<br>
+Daarnaast heb ik gewerkt om zelfs een kleuren kiezer te makne, hoewel Darice bij mijn project aangaf dat ze zelf niet kleuren wilde kiezen, gaf ze het bij andere projecten aan dat ze het juist WEL fijn vond. Ik heb dus elke emotie zelf een kleuren kiezer gegeven zodat je duidelijk zelf kan weten wanneer je een bepaalde emotie ziet: <br>
+<img width="275" height="203" alt="image" src="https://github.com/user-attachments/assets/5be853b9-bb1b-4ead-85ae-eee45d48616d" />
+<br>
+Ik heb de volgende code gebruikt om dit mogelijk te maken: <br>
+
+``` 
+function setupColorPickers() {
+    const colorConfigs = [
+        { id: 'color-enthusiastic', variable: '--enthusiastic-color' },
+        { id: 'color-happy', variable: '--happy-color' },
+        { id: 'color-serious', variable: '--serious-color' },
+        { id: 'color-sad', variable: '--sad-color' }
+    ];
+
+    colorConfigs.forEach(config => {
+        const picker = document.getElementById(config.id);
+        
+        const currentColor = getComputedStyle(document.body).getPropertyValue(config.variable).trim();
+        if (currentColor) picker.value = currentColor;
+
+        picker.addEventListener('input', (e) => {
+            const newColor = e.target.value;
+            document.body.style.setProperty(config.variable, newColor);
+            updateTranscriptHighlight();
+        });
+    });
+}
+
+.picker input[type="color"] {
+    width: 100%;
+    height: 30px;
+    border: none;
+    cursor: pointer;
+    background: none;
+}
+```
 
